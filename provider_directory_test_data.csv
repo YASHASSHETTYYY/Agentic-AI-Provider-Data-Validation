@@ -1,0 +1,11 @@
+provider_id,first_name,last_name,specialty,phone,email,address,city,state,zip,npi_number,license_number
+P001,Aarav,Sharma,Cardiology,9876543210,aarav.sharma@healthmail.com,12 MG Road,Bengaluru,KA,560001,1234567890,KA12345
+P002,Neha,Patil,Dermatology,9999999999,neha.patil@clinicmail.com,45 Linking Road,Mumbai,MH,400050,2345678901,MH67890
+P003,Rohit,Mehta,Orthopedics,9123456780,rohit.mehta@hospitalmail.com,Old Station Road,Pune,MH,411001,3456789012,
+P004,Priya,Iyer,Gynecology,8888888888,priya.iyer@caremail.com,78 Residency Road,Bengaluru,KA,560025,4567890123,KA54321
+P005,Vikram,Singh,Neurology,7012345678,vikram.singh@medmail.com,22 Park Street,Kolkata,WB,700016,5678901234,WB11111
+P006,Ananya,Rao,Pediatrics,9000000000,ananya.rao@kidsmail.com,15 Temple Street,Chennai,TN,600004,6789012345,TN22222
+P007,Karan,Malhotra,Cardiology,9123400000,karan.malhotra@heartmail.com,101 Sector 18,Noida,UP,201301,7890123456,UP33333
+P008,Sneha,Joshi,ENT,8000000000,sneha.joshi@entmail.com,Near City Mall,Indore,MP,452001,8901234567,MP44444
+P009,Arjun,Verma,General Medicine,9876500000,arjun.verma@generalmail.com,Unknown Street,Delhi,DL,110001,9012345678,DL55555
+P010,Pooja,Nair,Cardiology,9998887776,pooja.nair@clinicmail.com,20 Marine Drive,Mumbai,MH,400020,0123456789,MH99999
