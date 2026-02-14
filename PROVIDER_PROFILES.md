@@ -101,3 +101,10 @@ This revised design directly addresses the problems with the current UI:
 This UI transforms the results screen from "Click to see results" to "Results are visible instantly, with optional deep-dive," meeting all the success criteria you outlined.
 I will now create the file `app/main.py`, which will contain a basic implementation of the concepts that I have shown above.
 I will use the `write_file` to create this file.
+
+## 4. Visualizations Used
+
+- **Bar Chart: Providers by confidence score range**
+- **Pie Chart: Risk-level distribution**
+- **Heat Map: High-risk providers by location/specialty**
+- **Before–After Table: Field-level data corrections**

@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: provider_ops
+      POSTGRES_USER: provider
+      POSTGRES_PASSWORD: provider
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U provider -d provider_ops"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    environment:
+      APP_ENVIRONMENT: prod
+      APP_DATABASE_URL: postgresql+psycopg://provider:provider@db:5432/provider_ops
+      APP_SECRET_KEY: please-change-this-secret
+      APP_ACCESS_TOKEN_EXPIRE_MINUTES: 120
+      APP_CORS_ORIGINS: http://localhost:5173
+      APP_BOOTSTRAP_ADMIN_EMAIL: admin@providerops.local
+      APP_BOOTSTRAP_ADMIN_PASSWORD: ChangeMe123!
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: /api/v1
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+
+volumes:
+  postgres_data:
